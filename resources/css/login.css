@@ -1,0 +1,175 @@
+/* ===== Goggle Font Import -   Poformsins === */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #EED6AB, #ffffff);
+}
+
+.logo{
+    object-fit: cover;
+    min-width: 20px;
+    position: fixed; /* Mengatur posisi tetap */
+    top: 1%; /* Menempatkan gambar di bagian atas */
+    left: 53%; /* Menempatkan gambar di tengah secara horizontal */
+    transform: translateX(-50%); /* Menggeser gambar ke kiri setengah lebar gambar */
+}
+
+.logo img{
+    width: 80%;
+}
+
+.tampilan{
+    object-fit: cover;
+    min-width: 50px;
+    position: fixed; /* Mengatur posisi tetap */
+    left: 40%; /* Menempatkan gambar di tengah secara horizontal */
+    transform: translateX(-50%); /* Menggeser gambar ke kiri setengah lebar gambar */
+    bottom: 15%;
+}
+
+.tampilan img{
+    width: 90%;
+}
+
+.forms{
+    display: flex;
+    position: fixed;
+    right: 39%;
+    margin-left: 6%;
+    margin-top: 8%;
+}
+
+.form{
+    position: fixed;
+}
+
+.form .title{
+    font-size: 27px;
+    font-weight: 600;
+    position: fixed;
+    top: 28%;
+    right: 44%;
+}
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 34;
+    bottom: 6%;
+    height: 3px;
+    width: 30px;
+    background-color: #774107;
+    border-radius: 25px;
+}
+
+.container{
+    margin-bottom: 70%;    
+}
+
+.container .input-field{
+    position: relative;
+    height: 40px;
+    width: 200%;
+    margin-top: 30px;
+}
+
+.input-field .judul{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.input-field input{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.25 ease;
+    border-radius: 6px;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #561c24;
+}
+
+.input-field i{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transform: translateY(-50);
+    color: #999;
+    font-size: 20px; 
+}
+
+.container .checkbox-text{
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin: 0 8px -2px 4px;
+    align-content: #4070f4;
+}
+
+.container .text{
+    color: #333;
+    font-size: 13px;
+}
+
+.container a.text{
+    color: #4070f4;
+    font-size: 13px;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.container a:hover{
+    text-decoration: underline;
+}
+
+.container .button{
+    margin-top: 20px;
+}
+
+.container .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #c27d07;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background-color: #e5f440;
+    color: black;
+}
+
+.container .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}

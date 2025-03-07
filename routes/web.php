@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PemilihController;
 use App\Http\Controllers\KandidatController;
 use App\Http\Controllers\SuaraController;
+use App\Http\Controllers\loginController;
 use App\Models\PemilihModel;
 use Illuminate\Support\Facades\Route;
 
@@ -16,10 +17,10 @@ Route::get('/', function () {
 // Dashboard (Harus Login & Verifikasi)
 Route::get('/dashboard', function () {
     return view('admin.index');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['login', 'verified'])->name('dashboard');
 
 // Grouping Middleware Auth
-Route::middleware('auth')->group(function () {
+Route::middleware('login')->group(function () {
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -48,4 +49,6 @@ Route::middleware('auth')->group(function () {
 });
 
 // Auth Routes (Login, Logout, Register)
-require __DIR__.'/auth.php';
+Route::prefix('/login')->group(function () {
+    Route::get('/', [loginController::class, 'index'])->name('login.index');
+});
