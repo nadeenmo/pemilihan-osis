@@ -51,4 +51,9 @@ Route::middleware('login')->group(function () {
 // Auth Routes (Login, Logout, Register)
 Route::prefix('/login')->group(function () {
     Route::get('/', [loginController::class, 'index'])->name('login.index');
+    Route::post('/login/admin', [loginController::class, 'loginAdmin'])->name('login.admin');
+    Route::post('/login/user', [loginController::class, 'loginUser '])->name('login.user');
+    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard')->middleware('login');
+    Route::get('/user/dashboard', [PemilihController::class, 'index'])->name('user.dashboard')->middleware('login');
+
 });

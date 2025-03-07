@@ -1,0 +1,172 @@
+/* ===== Goggle Font Import -   Poformsins === */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: linear-gradient(to bottom, #a58d60, #ffffff);
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Mengatur tinggi kontainer */
+}
+
+.sidebar {
+    max-width: 25%; /* Lebar sidebar */
+    left: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    border-right: 2px solid black;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    position: fixed; /* Memastikan sidebar tetap di tempat */
+    left: -270px; /* Menyembunyikan sidebar di luar layar */
+    transition: left 0.3s ease; /* Animasi saat membuka/menutup */
+}
+
+aside .top{
+    display: flex;
+}
+
+aside .logo{
+    margin-top: 2%;
+    display: flex;
+    min-width: 30px;
+    left: 2%;
+}
+
+aside .logo img{
+    max-width: 80%;
+    object-fit: cover;
+}
+
+.horizontal-line {
+    border: none; /* Menghilangkan border default */
+    height: 2px; /* Tinggi garis */
+    background-color: #d5d5d5; /* Warna garis */
+    margin: 25px 0px; /* Jarak atas dan bawah */
+    align-content: center;
+    max-width: 100%;
+}
+
+.sidebar.open {
+    left: 0; /* Menampilkan sidebar */
+}
+
+.sidebar li {
+    list-style: none;
+}
+
+.sidebar li a {
+    display: flex;
+    color: var(--black-light-color);
+    margin-left: 1rem;
+    gap: 1rem;
+    min-width: 45px;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    text-decoration: none;
+    position: relative;
+    transition: var(--trans-05);
+    left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar li a img{
+    width: 14%;
+}
+
+.sidebar li a .title{
+    color: #5b4d09;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sidebar li a:hover{
+    transform: scale(1.2); 
+    text-decoration: underline;
+}
+
+.main-content {
+    flex: 1; /* Mengisi sisa ruang */
+    padding: 20px;
+    background-color: none;
+    margin-left: 250px; /* Memberikan ruang untuk sidebar */
+    transition: margin-left 0.3s ease; /* Animasi saat sidebar dibuka/ditutup */
+}
+
+.close-btn {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(23, 23, 23);
+    border: none;
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 8%;
+    transition: transform 0.3s ease;
+}
+
+.open-btn {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    margin-top: 1.4%;
+    display: flex;
+}   
+
+.close-btn:hover{
+    transform: scale(1.2); 
+}
+
+.close-btn {
+    background-color: none; /* Warna merah untuk tombol tutup */
+    float: right; /* Mengapungkan tombol tutup ke kanan */  
+}
+
+.open-btn .title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 5%;
+    margin-bottom: 1%;
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 1700px) {
+    .sidebar {
+        width: 17%; /* Lebar sidebar lebih kecil di layar kecil */
+    }
+
+    .main-content {
+        margin-left: 0; /* Menghilangkan margin saat sidebar ditutup */
+    }
+
+    .sidebar.open + .main-content {
+        margin-left: 17%; /* Memberikan ruang untuk sidebar saat dibuka */
+    }
+}
+
+@media (max-width: 1000px) {
+    .sidebar {
+        width: 100%; /* Sidebar mengambil seluruh lebar layar di perangkat kecil */
+        left: -100%; /* Menyembunyikan sidebar di luar layar */
+    }
+
+    .sidebar.open {
+        left: 0; /* Menampilkan sidebar */
+    }
+
+    .main-content {
+        margin-left: 0; /* Menghilangkan margin saat sidebar ditutup */
+    }
+
+    .sidebar.open + .main-content {
+        margin-left: 100%; /* Memberikan ruang untuk sidebar saat dibuka */
+    }
+}

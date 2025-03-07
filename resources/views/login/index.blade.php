@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!--  ===== Iconscout CSS ===== -->
-    <link rel="stylesheet" href="resources/css/login.css"> 
+    @vite(["resources/css/login.css", "resources/js/app.js"])
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
     <!-- ===== CSS ===== -->
@@ -13,11 +13,11 @@
 
 <body>
     <div class="logo">
-        <img src="public/img/logo.png">
+        <img src="img/Logo.png">
     </div>
 
     <div class="tampilan">
-        <img src="public/img/pemilihan.png">
+        <img src="img/pemilihan.png">
     </div>
 
     <div class="forms">
@@ -40,10 +40,10 @@
                     <input type="checkbox" id="logCheck">
                     <label for="logCheck" class="text">Remember me</label>
                 </div>
-                <a href="{!!route('password.request')!!}" method="POST" class="text forgot">Forgot password?</a>
+                <a method="POST" class="text forgot">Forgot password?</a>
             </div>
             <div class="input-field button">
-                <input type="button" value="Login Now">
+                <input type="button" value="Log In">
             </div>
         </form>
 
@@ -52,41 +52,11 @@
         </div>
     </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 <footer>
-    <script type="module">
-        document.getElementById('adminForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah form dari pengiriman default
-
-    const adminUsername = document.getElementById('adminUsername').value;
-    const adminPassword = document.getElementById('adminPassword').value;
-
-    // Validasi login admin (contoh sederhana)
-    if (adminUsername === 'admin' && adminPassword === 'admin123') {
-        alert('Login Admin Berhasil!');
-        // Redirect atau lakukan sesuatu setelah login berhasil
-    } else {
-        alert('Username atau Password Admin salah!');
-    }
-});
-
-document.getElementById('userForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah form dari pengiriman default
-
-    const userUsername = document.getElementById('userUsername').value;
-    const userPassword = document.getElementById('userPassword').value;
-
-    // Validasi login user (contoh sederhana)
-    if (userUsername === 'user' && userPassword === 'user123') {
-        alert('Login User Berhasil!');
-        // Redirect atau lakukan sesuatu setelah login berhasil
-    } else {
-        alert('Username atau Password User salah!');
-    }
-});
-
-    </script>
 
 </footer>
 </html>
