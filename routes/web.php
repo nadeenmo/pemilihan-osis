@@ -16,11 +16,11 @@ Route::get('/', function () {
 
 // Dashboard (Harus Login & Verifikasi)
 Route::get('/dashboard', function () {
-    return view('admin.index');
-})->middleware(['login', 'verified'])->name('dashboard');
+    return view('admin.dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 // Grouping Middleware Auth
-Route::middleware('login')->group(function () {
+Route::middleware('auth')->group(function () {
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -47,13 +47,15 @@ Route::middleware('login')->group(function () {
     Route::get('/vote', [SuaraController::class, 'index'])->name('vote.index');
     Route::post('/vote', [SuaraController::class, 'store'])->name('vote.store');
 });
+//
+//Auth Routes (Login, Logout, Register)
+// Route::prefix('/login')->group(function () {
+//     Route::get('/', [loginController::class, 'index'])->name('login.index');
+//     Route::post('/login/admin', [loginController::class, 'loginAdmin'])->name('login.admin');
+//     Route::post('/login/user', [loginController::class, 'loginUser '])->name('login.user');
+//     Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard')->middleware('login');
+//     Route::get('/user/dashboard', [PemilihController::class, 'index'])->name('user.dashboard')->middleware('login');
 
+//
 // Auth Routes (Login, Logout, Register)
-Route::prefix('/login')->group(function () {
-    Route::get('/', [loginController::class, 'index'])->name('login.index');
-    Route::post('/login/admin', [loginController::class, 'loginAdmin'])->name('login.admin');
-    Route::post('/login/user', [loginController::class, 'loginUser '])->name('login.user');
-    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard')->middleware('login');
-    Route::get('/user/dashboard', [PemilihController::class, 'index'])->name('user.dashboard')->middleware('login');
-
-});
+require __DIR__.'/auth.php';

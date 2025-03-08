@@ -18,7 +18,7 @@ class KandidatController extends Controller
         // if ($request->ajax()) {
         //     return response()->json($kandidats);
         // }
-        return view('admin/data_kandidat/index',compact('kandidat'));
+        return view('admin/data_kandidat/index',compact('kandidats'));
     }
 
     /**

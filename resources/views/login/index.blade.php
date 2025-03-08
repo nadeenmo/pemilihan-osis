@@ -26,29 +26,29 @@
         </div>
 
         <div class="container">
-        <form action="#">
-            <div class="input-field userName">
-                <span class="judul">Username</span><br>
-                <input type="text" id="userName" placeholder="Masukkan NIS/NISN" required>
-            </div>
-            <div class="input-field passWord">
-                <span class="judul">Kode Akses</span><br>
-                <input type="password" id="passWord" placeholder="Masukkan Kode" required>
-            </div>
-            <div class="checkbox-text">
-                <div class="checkbox-content">
-                    <input type="checkbox" id="logCheck">
-                    <label for="logCheck" class="text">Remember me</label>
+            <form action="#">
+                <div class="input-field userName">
+                    <span class="judul">Username</span><br>
+                    <input type="text" id="userName" placeholder="Masukkan NIS/NISN" required>
                 </div>
-                <a method="POST" class="text forgot">Forgot password?</a>
-            </div>
-            <div class="input-field button">
-                <input type="button" value="Log In">
-            </div>
-        </form>
+                <div class="input-field passWord">
+                    <span class="judul">Kode Akses</span><br>
+                    <input type="password" id="passWord" placeholder="Masukkan Kode" required>
+                </div>
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <input type="checkbox" id="logCheck">
+                        <label for="logCheck" class="text">Remember me</label>
+                    </div>
+                    <a method="POST" class="text forgot">Forgot password?</a>
+                </div>
+                <div class="input-field button">
+                    <input type="button" value="Log In">
+                </div>
+            </form>
 
-        <div class="login-signup">
-        </div>
+            <div class="login-signup">
+            </div>
         </div>
     </div>
     </div>
@@ -59,4 +59,5 @@
 <footer>
 
 </footer>
+
 </html>
