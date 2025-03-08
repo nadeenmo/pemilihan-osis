@@ -1,6 +1,5 @@
-@extends('layouts.app')
+@extends('admin.extend.extends')
 
-@section('content')
 <div class="container">
     <div class="row">
 
@@ -11,52 +10,8 @@
             @vite(['resources/js/app.js'])
         </head>
 
-        <!-- Sidebar -->
-        <div class="col-md-2 bg-light vh-100">
-            <div class="p-3">
-                <div class="sidebar-header text-center p-3">
-                    <img src="img/satu_suara.png" class="img-fluid">
-                    <p class="text-muted small fw-bolder m-0">
-                        SatuSuara, <span class="text-danger fw-bolder">Satoe</span> Arah, <span
-                            class="text-danger fw-bolder">Satoe</span> Pemimpin
-                    </p>
-                </div>
-
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a href="/dashboard" class="nav-link text-dark">
-                            <i class="bi bi-house-door-fill me-2"></i> Beranda
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/kandidat" class="nav-link text-dark">
-                            <i class="bi bi-person-bounding-box me-2"></i> Data Kandidat
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/pemilih" class="nav-link text-dark">
-                            <i class="bi bi-person-check-fill me-2"></i> Data Pemilih
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/kode-akses" class="nav-link text-dark">
-                            <i class="bi bi-key-fill me-2"></i> Akses
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/vote" class="nav-link text-dark">
-                            <i class="bi bi-bar-chart-fill me-2"></i> Hasil Suara
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-danger">
-                            <i class="bi bi-box-arrow-right me-2"></i> Log Out
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
+        @section('content')
+            @section('title') Hasil Suara @endsection
         <div class="col-12">
             <div class="card">
                 <div class="card-header">

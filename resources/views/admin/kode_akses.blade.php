@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@extends('admin.extend.extends')
 
 @section('content')
+@section('title') Akses @endsection
 <div class="container">
     <h2>Akses</h2>
     <p>Halo, admin!</p>

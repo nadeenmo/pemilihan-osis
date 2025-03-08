@@ -9,7 +9,13 @@
 }
 
 body {
-    background-color: linear-gradient(to bottom, #a58d60, #ffffff);
+    height: 100vh;
+    width: 215vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #EED6AB, #ffffff);
+    background-attachment: fixed;
 }
 
 .container {
@@ -37,13 +43,13 @@ aside .top{
 aside .logo{
     margin-top: 2%;
     display: flex;
-    min-width: 30px;
-    left: 2%;
+    min-width: 20px;
+    left: 0%;
 }
 
 aside .logo img{
-    max-width: 80%;
-    object-fit: cover;
+    max-width: 100%;
+    left: 0%;
 }
 
 .horizontal-line {
@@ -66,7 +72,6 @@ aside .logo img{
 .sidebar li a {
     display: flex;
     color: var(--black-light-color);
-    margin-left: 1rem;
     gap: 1rem;
     min-width: 45px;
     align-items: center;
@@ -75,7 +80,7 @@ aside .logo img{
     text-decoration: none;
     position: relative;
     transition: var(--trans-05);
-    left: 5px;
+    left: 0px;
     transition: transform 0.3s ease;
 }
 
@@ -102,39 +107,25 @@ aside .logo img{
     transition: margin-left 0.3s ease; /* Animasi saat sidebar dibuka/ditutup */
 }
 
-.close-btn {
-    cursor: pointer;
-    background-color: white;
-    color: rgb(23, 23, 23);
-    border: none;
-    font-size: 40px;
-    font-weight: 500;
-    margin-left: 8%;
-    transition: transform 0.3s ease;
+.bi-list{
+    color: rgb(56, 15, 15);
+    font-size: 200%;
+    top: 15px; /* Jarak dari atas */
+    left: 10px;
+    margin-top: 1%;
 }
 
-.open-btn {
-    cursor: pointer;
-    background-color: white;
-    border: none;
-    margin-top: 1.4%;
-    display: flex;
-}   
-
-.close-btn:hover{
-    transform: scale(1.2); 
-}
-
-.close-btn {
-    background-color: none; /* Warna merah untuk tombol tutup */
-    float: right; /* Mengapungkan tombol tutup ke kanan */  
-}
-
-.open-btn .title{
-    font-size: 24px;
+.bi-list .title{
     font-weight: 600;
-    margin-left: 5%;
-    margin-bottom: 1%;
+    font-size: 30px;
+    margin-left: 10px;
+    font-style: normal;
+}
+
+.row p{
+    margin-left: 4.8%;
+    margin-top: 0%;
+    font-size: 17px;
 }
 
 /* Media Queries untuk Responsivitas */

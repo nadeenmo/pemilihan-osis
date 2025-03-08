@@ -14,11 +14,11 @@ class SuaraController extends Controller
     public function index()
     {
         //
-        $kandidats = KandidatModel::withCount('votes')->get(); // Pastikan ada relasi votes di model Kandidat
+        $kandidats = KandidatModel::withCount('suara')->get(); // Pastikan ada relasi votes di model Kandidat
         $labels = $kandidats->pluck('nama_ketua'); // Ambil nama ketua sebagai label
         $data = $kandidats->pluck('votes_count'); // Ambil jumlah suara
-        $votes = SuaraModel::All();
-        return view('admin/hasil_suara.index', compact('votes'));
+        $suara = SuaraModel::All();
+        return view('admin/hasil_suara.index', compact('suara'));
     }
 
     /**
