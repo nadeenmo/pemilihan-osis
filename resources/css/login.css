@@ -33,9 +33,9 @@ body{
     object-fit: cover;
     min-width: 50px;
     position: fixed; /* Mengatur posisi tetap */
-    left: 40%; /* Menempatkan gambar di tengah secara horizontal */
+    left: 37%; /* Menempatkan gambar di tengah secara horizontal */
     transform: translateX(-50%); /* Menggeser gambar ke kiri setengah lebar gambar */
-    bottom: 15%;
+    bottom: 1%;
 }
 
 .tampilan img{
@@ -58,7 +58,7 @@ body{
     font-size: 27px;
     font-weight: 600;
     position: fixed;
-    top: 28%;
+    top: 30%;
     right: 44%;
 }
 .form .title::before{
@@ -73,7 +73,7 @@ body{
 }
 
 .container{
-    margin-bottom: 70%;    
+    margin-bottom: 10%;    
 }
 
 .container .input-field{
